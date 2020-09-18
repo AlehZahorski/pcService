@@ -23,11 +23,19 @@ body{
     margin: 0 auto;
 }
 
+
+
+
 .header{
     padding-top: 0;
     position: relative;
     height: 100vh;
     width: 100%;
+    h1{
+        text-align: center;
+        font-size: 50px;
+        margin-top: 50px;
+    }
     &_main{
         a{
             img{
@@ -53,7 +61,7 @@ body{
         }
         &__screen{
             position: absolute;
-            margin-top: 15%;
+            margin-top: 12%;
             color: white;
             display: flex;
             flex-direction: row;
@@ -98,4 +106,142 @@ body{
             }
         }
     }   
+}
+
+
+
+.about{
+    h2{
+        text-align: center;
+        font-size: 45px;
+    }
+    &_flex{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        div{
+            width: 300px;
+            height: 400px;
+            background-color: rgb(245, 210, 105);
+            margin: 30px;
+        }
+    }
+}
+
+
+
+.typeWork{
+    h2{
+        text-align: center;
+        font-size: 45px;
+    }
+    &_flex{
+        display: flex;
+        flex-direction: row;
+        div{
+            width: 400px;
+            height: 450px;
+            background-color: rgb(255, 192, 74);
+            margin: 30px;
+        }
+    }
+}
+
+
+.ac-container{
+    width: 1000px;
+    margin: 40px auto;
+    h2{
+        text-align: center;
+        font-size: 45px;
+    }
+    label{
+        font-family: 'Arial Narrow', Arial, sans-serif;
+        padding: 5px 20px;
+        position: relative;
+        z-index: 20;
+        display: block;
+        height: 30px;
+        cursor: pointer;
+        color: #777;
+        text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+        line-height: 33px;
+        font-size: 19px;
+        background: -moz-linear-gradient(top, #ffffff 1%, #eaeaea 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ffffff), color-stop(100%,#eaeaea));
+        background: -webkit-linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+        background: -o-linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+        background: -ms-linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+        background: linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=0 );
+        box-shadow: 
+            0px 0px 0px 1px rgba(155,155,155,0.3), 
+            1px 0px 0px 0px rgba(255,255,255,0.9) inset, 
+            0px 2px 2px rgba(0,0,0,0.1);
+    }
+
+
+    label:hover{
+        background: #fff;
+    }
+
+    input:checked + label,
+    input:checked + label:hover{
+        background: #c6e1ec;
+        color: #3d7489;
+        text-shadow: 0px 1px 1px rgba(255,255,255, 0.6);
+        box-shadow: 
+            0px 0px 0px 1px rgba(155,155,155,0.3), 
+            0px 2px 2px rgba(0,0,0,0.1);
+    }
+
+    label:hover:after,
+    input:checked + label:hover:after{
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        right: 13px;
+        top: 7px;
+        background: transparent url(http://netcribe.com/example/arrow_down.png) no-repeat center center;  
+    }
+
+    input:checked + label:hover:after {
+        background-image: url(http://netcribe.com/example/arrow_up.png);
+    }
+
+    input{
+        display: none;
+    }
+
+    article{
+        background: rgba(255, 255, 255, 0.5);
+        margin-top: -1px;
+        overflow: hidden;
+        height: 0px;
+        position: relative;
+        z-index: 10;
+        -webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+        -moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+        -o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+        -ms-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+        transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+    }
+    input:checked ~ article {
+        -webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+        -moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+        -o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+        -ms-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+        transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+        box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+        height: 100px;
+    }
+
+    article p{
+        font-style: italic;
+        color: #777;
+        line-height: 23px;
+        font-size: 14px;
+        padding: 20px;
+        text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+    }
 }
