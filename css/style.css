@@ -181,3 +181,11 @@ body {
     font-size: 14px;
     padding: 20px;
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8); }
+
+.maps {
+  text-align: center; }
+  .maps_flex {
+    display: flex;
+    flex-direction: row; }
+  .maps H2 {
+    font-size: 45px; }
