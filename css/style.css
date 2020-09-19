@@ -203,10 +203,6 @@ body {
       .typeWork_flex div h3 {
         font-size: 26px;
         font-weight: 900; }
-    .typeWork_flex div:hover {
-      -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
-      box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75); }
 
 .ac-container {
   width: 1000px;
