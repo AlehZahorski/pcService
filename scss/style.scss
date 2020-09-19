@@ -256,7 +256,6 @@ body{
         flex-direction: row;
         div{
             width: 400px;
-            height: 450px;
             margin: 30px;
             position: relative;
             text-align: center;
@@ -264,6 +263,10 @@ body{
                 width: 200px;
                 margin-left: 50%;
                 transform: translate(-50%, 0);
+            }
+            h3{
+                font-size: 26px;
+                font-weight: 900;
             }
         }
         div:hover{
@@ -381,6 +384,42 @@ body{
     &_flex{
         display: flex;
         flex-direction: row;
+        &__rightSide{
+            &__form{
+                width: 400px;
+                height: 500px;
+                margin-left: 100px;
+                display: flex;
+                color: white;
+                flex-direction: column;
+                input:nth-child(1){
+                    margin-top: 30px;
+                }
+                input{
+                    width: 90%;
+                    margin: 10px auto;
+                    height: 20px;
+                    border: none;
+                    border-bottom: 2px solid rgb(124, 124, 124);
+                    background-color: transparent;
+                    outline: none;
+                    font-size: 1.1em;
+                }
+                textarea{
+                    width: 90.5%;
+                    height: 250px;
+                    margin: 10px auto;
+                    resize: vertical;
+                    font-size: 1.2em;
+                }
+                button{
+                    width: 92%;
+                    margin: 10px auto;
+                    height: 40px;
+                    font-size: 1.2em;
+                }
+            }
+        }
     }
     H2{
         font-size: 45px;
