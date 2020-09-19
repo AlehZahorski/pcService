@@ -2,7 +2,22 @@
     font-family: 'MyRoboto';
     src: url(../fonts/BebasNeue-Regular.ttf);
 }
+@import url('https://fonts.googleapis.com/css?family=Mukta:700');
 
+$bg: #f3f8fa;
+$white: #fff;
+$black: #282936;
+
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+  transition: $property $duration $ease;
+}
+
+* {
+  box-sizing: border-box;
+  &::before, &::after {
+    box-sizing: border-box;
+  }
+}
 
 body{
     padding: 0px;
@@ -118,11 +133,112 @@ body{
     &_flex{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        margin: 50px auto 50px auto;
         div{
             width: 300px;
-            height: 400px;
-            background-color: rgb(245, 210, 105);
-            margin: 30px;
+            height: 95%;
+            background-color: rgb(255, 253, 248);margin: 30px;
+            position: relative;
+         
+            border-bottom: 5px solid rgb(85, 85, 240);
+            img{
+                width: 300px;
+            }
+            h3{
+                text-align: center;
+            }
+            p{
+                padding: 10px;
+            }
+            button {
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+                outline: none;
+                border: 0;
+                vertical-align: middle;
+                text-decoration: none;
+                background: transparent;
+                padding: 0;
+                font-size: inherit;
+                font-family: inherit;
+                &.learn-more {
+                  width: 12rem;
+                  height: auto;
+                    margin-left: 50px;
+                    margin-bottom: 10px;
+                  .circle {
+                    @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+                    position: relative;
+                    display: block;
+                    margin: 0;
+                    width: 3rem;
+                    height: 3rem;
+                    background: $black;
+                    border-radius: 1.625rem;
+                    .icon {
+                      @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+                      position: absolute;
+                      top: 0;
+                      bottom: 0;
+                      margin: auto;
+                      background: $white;
+                      &.arrow {
+                        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+                        left: 0.625rem;
+                        width: 1.125rem;
+                        height: 0.125rem;
+                        background: none;
+                        &::before {
+                          position: absolute;
+                          content: '';
+                          top: -0.25rem;
+                          right: 0.0625rem;
+                          width: 0.625rem;
+                          height: 0.625rem;
+                          border-top: 0.125rem solid #fff;
+                          border-right: 0.125rem solid #fff;
+                          transform: rotate(45deg);
+                        }
+                      }
+                    }
+                  }
+                  .button-text {
+                    @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    padding: 0.75rem 0;
+                    margin: 0 0 0 1.85rem;
+                    color: $black;
+                    font-weight: 700;
+                    line-height: 1.6;
+                    text-align: center;
+                    text-transform: uppercase;
+                  }
+                }
+                &:hover {
+                  .circle {
+                    width: 100%;
+                    .icon {
+                      &.arrow {
+                      background: $white;
+                      transform: translate(1rem, 0);
+                      }
+                    }
+                  }
+                  .button-text {
+                    color: $white;
+                  }
+                }
+              }
+        }
+        div:hover{
+            -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+            box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
         }
     }
 }
@@ -130,6 +246,7 @@ body{
 
 
 .typeWork{
+    margin-top: 150px;
     h2{
         text-align: center;
         font-size: 45px;
@@ -140,8 +257,19 @@ body{
         div{
             width: 400px;
             height: 450px;
-            background-color: rgb(255, 192, 74);
             margin: 30px;
+            position: relative;
+            text-align: center;
+            img{
+                width: 200px;
+                margin-left: 50%;
+                transform: translate(-50%, 0);
+            }
+        }
+        div:hover{
+            -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+            box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
         }
     }
 }
@@ -149,7 +277,7 @@ body{
 
 .ac-container{
     width: 1000px;
-    margin: 40px auto;
+    margin: 200px auto 0 auto;
     h2{
         text-align: center;
         font-size: 45px;
@@ -247,8 +375,9 @@ body{
 }
 
 
-.maps{
+.contact{
     text-align: center;
+    margin-top: 150px;
     &_flex{
         display: flex;
         flex-direction: row;
@@ -256,4 +385,11 @@ body{
     H2{
         font-size: 45px;
     }
+}
+
+
+.footer{
+    height: 300px;
+    margin-top: 50px;
+    background-color: #282936;
 }
