@@ -22,11 +22,20 @@ $black: #282936;
 body{
     padding: 0px;
     margin: 0px;
-    h1, h2, h3 {
+    input[type~="text"], input[type~="password"], input[type~="select"], textarea[type~="select"]{
+        font-family: 'RussoOne';
+    }
+    article, label{
+        font-family: 'RussoOne';
+    }
+    h1, h2, h3, h4 {
         margin-top: 0pt;
         padding-left: 0pt;
         padding-right: 0pt;
         font-family: 'RussoOne';
+    }
+    h4{
+        margin-bottom: 10px;
     }
     p{
         font-family: 'RussoOne';
@@ -71,10 +80,10 @@ body{
             &__formargin{
                 margin-top: 40px;
             }
-            font-size: 30px;
+            font-size: 25px;
             float: right;
             span{
-                padding-left: 40px;
+                padding-left: 30px;
                 color: black;
             }
             a{
@@ -436,4 +445,21 @@ body{
     height: 300px;
     margin-top: 50px;
     background-color: #282936;
+    text-align: center;
+    &_info{
+        margin-top: 30px;
+        margin-bottom: 20px;
+        img{
+            width:30px;
+        }
+        color: rgb(218, 218, 218);
+        font-size: 30px;
+    }
+    &_copywrite{
+        color: rgb(218, 218, 218);
+        text-align: center;
+        p{
+            line-height: .5;
+        }
+    }
 }
