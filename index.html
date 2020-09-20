@@ -12,7 +12,20 @@
     <section class="header">
      <div class="pagesBody">
         <div class="header_main">
-            <a href="#"> <span><img src="img/logo.png" alt=""></span> </a>
+        <div class="flex">
+            <div class="header_main_tel">
+                 <a href="#"> <span><img src="img/logo.png" alt=""></span> </a>
+                 <div class="header_main_tel_flex">
+                     <div class="header_main_tel_flex_grid">
+                         <img src="img/5-1.png" alt="">
+                         <p>+48 782 423 123</p>
+                     </div>
+                    <div class="header_main_tel_flex_grid">
+                        <img src="img/5-2.png" alt="">
+                        <p>tomek@gmail.com</p>
+                    </div>
+                 </div>
+            </div>
             <div class="header_main__nav">
                 <div class="header_main__nav__formargin">
                     <a href="#"> <span>Pomoc</span> </a>
@@ -21,16 +34,22 @@
                     <a href="#"> <span>Kontakt</span></a>
                 </div>
             </div>
+        </div>
             <div class="header_main__screen">
                 <div class="header_main__screen__left">
                    <img src="img/hotpng.com.png" alt="">
                 </div>  
-                <form class="header_main__screen__right">
-                        <input type="text" required  placeholder="name">
-                        <input type="text" required  placeholder="mail">
-                        <input type="text" required  placeholder="phone*">
+                <form class="header_main__screen__right" id="form">
+                        <!-- Hidden Required Fields -->
+                        <input type="hidden" name="project_name" value="Site Name">
+                        <input type="hidden" name="admin_email" value="admin@mail.com">
+                        <input type="hidden" name="form_subject" value="Form Subject">
+                        <!-- END Hidden Required Fields -->
+                        <input type="text" name="Name" required  placeholder="name">
+                        <input type="text" name="E-mail" required  placeholder="mail">
+                        <input type="text" name="Phone" required  placeholder="phone*">
                         <textarea name="asd" id="" cols="30" rows="10"></textarea>
-                        <button>PUSH</button>
+                        <button>SEND</button>
                 </form>
             </div>
         </div>
@@ -42,7 +61,7 @@
     <!-- ABOUT -->
     <section class="about">
         <div class="pagesBody">
-             <h2>NAJCZESTSZE PROBLEMY UZYTKOWNIKOW</h2>
+            <h2>NAJCZESTSZE PROBLEMY UZYTKOWNIKOW</h2>
         <div class="about_flex">
             <div class="about_flex__first">
                 <img src="img/2-1.jpg" alt="">
@@ -199,10 +218,15 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4889.326372717845!2d20.797524!3d52.213168!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47194abdad670599%3A0xca54b1f4acd15ba4!2sRomana%20Dmowskiego%2010%2C%2005-850%20O%C5%BCar%C3%B3w%20Mazowiecki!5e0!3m2!1sru!2spl!4v1600514546376!5m2!1sru!2spl" width="600" height="460" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>             </div>
              <div class="contact_flex__rightSide">
                 <form class="contact_flex__rightSide__form">
-                    <input type="text" required  placeholder="name">
-                    <input type="text" required  placeholder="mail">
-                    <input type="text" required  placeholder="phone*">
-                    <textarea name="asd" id="" cols="30" rows="10"></textarea>
+                     <!-- Hidden Required Fields -->
+                     <input type="hidden" name="project_name" value="serwis komouterowy ozarow mazowiecki">
+                     <input type="hidden" name="admin_email" value="jeangreenbass@gmail.com">
+                     <input type="hidden" name="form_subject" value="kontakt z klientem">
+                     <!-- END Hidden Required Fields -->
+                     <input type="text" name="Name" required  placeholder="name">
+                     <input type="text" name="E-mail" required  placeholder="mail">
+                     <input type="text" name="Phone" required  placeholder="phone*">
+                     <textarea name="asd" id="" cols="30" rows="10"></textarea>
                     <button>PUSH</button>
             </form>
              </div>
@@ -215,7 +239,7 @@
     <section class="footer">
         <div class="pagesBody">
         <div class="footer_info">
-            <h4>Tutaj sa moje dane kontaktowe.</h4>
+            <h4>Dane kontaktowe</h4>
             <div class="footer_info__tel">
                 <img src="img/5-1.png" alt="">
                 <span>+48 782 423 123</span>
@@ -255,6 +279,7 @@
     ░░░░░░▀▄▄░▒▒▒▒░░░░░░░░░░▒░░░█
     ░░░░░░░░░▀▀▀▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▀
   -->
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
